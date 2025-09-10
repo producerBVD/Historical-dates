@@ -1,0 +1,274 @@
+/* Вертикальная линия, 1px, цвет #D9D9D9, отступ 320px слева */
+.vertical-line {
+  position: fixed;
+  top: 0;
+  left: 320px;
+  width: 1px;
+  height: 100vh;
+  background-color: #D9D9D9;
+  z-index: 1;
+}
+/* Вертикальная линия, 1px, цвет #D9D9D9, отступ 160px справа */
+.vertical-line-right {
+  position: fixed;
+  top: 0;
+  right: 160px;
+  width: 1px;
+  height: 100vh;
+  background-color: #D9D9D9;
+}
+/* Вертикальная линия, 1px, цвет #D9D9D9, в центре между двумя, на 1040px слева */
+.vertical-line-middle {
+  position: fixed;
+  top: 0;
+  left: 1040px;
+  width: 1px;
+  height: 100vh;
+  background-color: #D9D9D9;
+}
+/* Горизонтальная полоска, 1px, цвет #D9D9D9, от верхнего края 480px, от левой до правой линии */
+.horizontal-line {
+  position: fixed;
+  top: 480px;
+  left: 320px;
+  width: calc(100vw - 320px - 160px);
+  height: 1px;
+  background-color: #D9D9D9;
+}
+/* Круг, размер 546x530, прозрачный, толщина 1px, цвет #D9D9D9, позиция 215px сверху, 772px слева */
+.circle {
+  position: fixed;
+  top: 215px;
+  left: 772px;
+  width: 546px;
+  height: 530px;
+  border: 1px solid #D9D9D9;
+  border-radius: 50%;
+  background-color: transparent;
+}
+/* Точка на окружности, 6x6, цвет #42567A */
+.point {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #42567A;
+}
+/* Сброс отступов и высоты body для корректного отображения, цвет фона #F4F5F9 */
+body, html {
+  margin: 0;
+  height: 100%;
+  background-color: #F4F5F9;
+}
+
+/* Контейнер для годов */
+.year-container {
+  position: fixed;
+  top: 350px;
+  left: 537px;
+  right: 410px;
+  bottom: 520px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Стиль для левого года */
+.year-left {
+  font-family: 'PT Sans', system-ui, Arial, sans-serif;
+  font-size: 200px;
+  font-weight: 700;
+  color: #5B5FE3;
+  margin-right: 80px;
+}
+
+/* Стиль для правого года */
+.year-right {
+  font-family: 'PT Sans', system-ui, Arial, sans-serif;
+  font-size: 200px;
+  font-weight: 700;
+  color: #F15CA3;
+}
+
+/* Блок с заголовком */
+.title-block {
+  position: fixed;
+  top: 170px;
+  left: 400px;
+  width: 353px;
+  height: 134px;
+  font-family: 'PT Sans', system-ui, Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: #42567A;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  line-height: 1.2;
+}
+
+/* Векторное изображение */
+.vector-image {
+  position: fixed;
+  top: 177px;
+  left: 319px;
+  z-index: 2;
+}
+
+/* Новый блок */
+.new-block {
+  width: 320px;
+  height: 281px;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+/* Заголовок блока */
+.block-title {
+  width: 41px;
+  height: 30px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 25px;
+  color: #3877EE;
+  margin: 0;
+}
+
+/* Текстовый блок */
+.block-text {
+  margin-top: 15px;
+  width: 320px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #42457A;
+  margin-bottom: 0;
+}
+
+/* Стили для слайдера */
+.swiper-container {
+  position: fixed !important;
+  bottom: 104px;
+  left: 400px;
+  width: 1120px;
+  height: 281px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.swiper-wrapper {
+  position: fixed;
+  top: 841px;
+  left: 400px;
+  display: flex;
+  transition: transform 0.3s ease;
+  /* padding-top: 31px; Убираем padding-top, заменяем margin у слайдов */
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 320px;
+  height: 281px;
+  margin-right: 80px;
+  box-sizing: border-box;
+  margin-top: 0; /* Убираем margin-top, так как теперь высота соответствует */
+}
+
+/* Новый контейнер для кнопок и счетчика */
+.swiper-controls-container {
+  position: fixed;
+  bottom: 295px;
+  left: 400px;
+  display: grid;
+  grid-template-areas: "counter counter" "prev next";
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-items: start;
+  width: 120px;
+  height: 88px;
+  z-index: 20;
+}
+
+/* Счетчик слайдов */
+.swiper-counter {
+  grid-area: counter;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 14px;
+  color: #42567A;
+  user-select: none;
+  width: auto;
+  text-align: left;
+  margin: 0;
+}
+
+/* Стили для стрелок */
+.swiper-button-prev {
+  grid-area: prev;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #42567A;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #42567A;
+  color: #42567A;
+  transform: none;
+}
+
+.swiper-button-next {
+  grid-area: next;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #42567A;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #42567A;
+  color: #42567A;
+  transform: none;
+}
+
+/* Убираем стандартные стрелки */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: solid #42567A;
+  border-width: 0 2px 2px 0;
+  padding: 0;
+  box-sizing: content-box;
+  margin: 0;
+}
+
+/* Стрелка влево */
+.swiper-button-prev::after {
+  transform: rotate(135deg);
+  border-width: 0 2px 2px 0;
+}
+
+/* Стрелка вправо */
+.swiper-button-next::after {
+  transform: rotate(-45deg);
+  border-width: 0 2px 2px 0;
+}
